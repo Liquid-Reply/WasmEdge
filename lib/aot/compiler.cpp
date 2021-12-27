@@ -453,7 +453,6 @@ static llvm::Type *toLLVMType(llvm::LLVMContext &LLContext,
     return llvm::Type::getDoubleTy(LLContext);
   default:
     assuming(false);
-    __builtin_unreachable();
   }
 }
 
@@ -516,7 +515,6 @@ static llvm::Constant *toLLVMConstantZero(llvm::LLVMContext &LLContext,
     return llvm::ConstantFP::get(llvm::Type::getDoubleTy(LLContext), 0.0);
   default:
     assuming(false);
-    __builtin_unreachable();
   }
 }
 
